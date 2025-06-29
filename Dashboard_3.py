@@ -3,6 +3,13 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime, timedelta
 
+# Debug import for Plotly
+try:
+    import plotly.express as px
+    print("Plotly imported successfully!")
+except ImportError as e:
+    print(f"ImportError: {e}")
+    
 # --- Setup ---
 st.set_page_config(page_title="Executive Fraud Metrics", layout="wide")
 st.title("\U0001F4C8 Executive Metrics Dashboard - Fraud Overview")
